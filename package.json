@@ -1,0 +1,31 @@
+{
+  "name": "middy-secrets",
+  "version": "0.1.0",
+  "description": "Middy middleware that loads secret data from AWS Secrets Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsz/middy-secrets.git"
+  },
+  "keywords": [
+    "middy",
+    "middleware",
+    "lambda",
+    "secrets",
+    "aws",
+    "secretsmanager"
+  ],
+  "author": "Jakub Chrzanowski <jakub@chrzanowski.info>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsz/middy-secrets/issues"
+  },
+  "homepage": "https://github.com/hsz/middy-secrets#readme",
+  "peerDependencies": {
+    "aws-sdk": "2.x",
+    "middy": "0.x"
+  }
+}
