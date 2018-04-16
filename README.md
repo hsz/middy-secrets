@@ -10,7 +10,7 @@ Middy middleware that loads secret data from AWS Secrets Manager.
 Installing `middy-secrets`
 
 ```bash
-npm install --save middy # You need middy and redis installed
+npm install --save middy # You need middy installed
 npm install --save middy-secrets
 ```
 
