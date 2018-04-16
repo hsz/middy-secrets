@@ -1,19 +1,12 @@
 import AWS from 'aws-sdk';
 
-export default (opts) => {
+export default (opts = {}) => {
   const defaults = {
-    awsSdkOptions: {
-      endpoint: 'https://secretsmanager.eu-west-1.amazonaws.com',
-    },
+    awsSdkOptions: {},
     setToContext: false,
   };
 
-  const options = Object.assign({}, defaults, {
-    awsSdkOptions: {
-      region: opts.region,
-    },
-  }, opts);
-
+  const options = Object.assign({}, defaults, opts);
   const client = new AWS.SecretsManager(options.awsSdkOptions);
   const getSecretValue = () => new Promise((resolve, reject) =>
     client.getSecretValue({ SecretId: options.secretName }, function (err, data) {
