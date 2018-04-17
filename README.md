@@ -3,7 +3,7 @@ middy-secrets
 
 [![npm version](https://badge.fury.io/js/middy-secrets.svg)](https://badge.fury.io/js/middy-secrets)
 
-Middy middleware that loads secret data from AWS Secrets Manager.
+[Middy][middy] middleware that loads secret data from [AWS Secrets Manager][aws-sm].
 
 ## Getting Started
 
@@ -64,4 +64,6 @@ be provided or passed with `awsSdkOptions` parameter.
 
 Feel free to open a Pull Request or Issue w/ a bug report or feature request.
 
+[aws-sm]: https://aws.amazon.com/secrets-manager/
 [aws-sm-docs]: https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/SecretsManager.html#constructor-property
+[middy]: https://github.com/middyjs/middy
