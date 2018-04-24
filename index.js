@@ -1,4 +1,5 @@
-import AWS from 'aws-sdk';
+const AWS = require('aws-sdk');
+const createError = require('http-errors');
 
 export default (opts = {}) => {
   const defaults = {
@@ -24,9 +25,13 @@ export default (opts = {}) => {
   );
 
   return {
-    before: handler => getSecretValue().then((secrets) => {
-      const target = options.setToContext ? handler.context : process.env;
-      Object.assign(target, secrets);
-    }),
+    before: handler => getSecretValue()
+      .then((secrets) => {
+        const target = options.setToContext ? handler.context : process.env;
+        Object.assign(target, secrets);
+      })
+      .catch(({ statusCode, message }) => {
+        throw createError(statusCode, message);
+      }),
   };
 };

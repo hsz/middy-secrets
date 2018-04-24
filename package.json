@@ -27,5 +27,9 @@
   "peerDependencies": {
     "aws-sdk": "2.x",
     "middy": "0.x"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.227.1",
+    "http-errors": "^1.6.3"
   }
 }
