@@ -28,7 +28,7 @@ export default (opts = {}) => {
     before: handler => getSecretValue()
       .then((secrets) => {
         const target = options.setToContext ? handler.context : process.env;
-        Object.assign(target, secrets);
+        Object.assign(target, options.contextKey ? {[options.contextKey] : secrets} : secrets);
       })
       .catch(({ statusCode, message }) => {
         throw createError(statusCode, message);

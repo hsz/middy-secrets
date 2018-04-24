@@ -1,6 +1,6 @@
 {
   "name": "middy-secrets",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Middy middleware that loads secret data from AWS Secrets Manager",
   "main": "index.js",
   "scripts": {

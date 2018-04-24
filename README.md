@@ -51,9 +51,10 @@ module.exports = { handler };
 
 | Parameter | Type | Description |
 | --- | --- | --- |
-| secretName | <code>string</code> | *Required.* Secret name of your secrets |
-| setToContext | <code>boolean</code> | If set to <code>true</code>, all secrets will be stored in `context` object, otherwise - in `process.env`. Default _false_. |
-| awsSdkOptions | <code>object</code> | Object that overwrites default [AWS Secrets Manager][aws-sm-docs]) options |
+| secretName | `string` | *Required.* Secret name of your secrets |
+| setToContext | `boolean` | If set to `true`, all secrets will be stored in `context` object, otherwise - in `process.env`. Default _false_. |
+| contextKey | `string` | If set, secrets will be set under provided key, otherwise directly in `context`/`process.env` object.
+| awsSdkOptions | `object` | Object that overwrites default [AWS Secrets Manager][aws-sm-docs]) options |
 
 _Note:_
 
