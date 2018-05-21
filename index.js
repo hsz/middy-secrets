@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const createError = require('http-errors');
 
-export default (opts = {}) => {
+const middleware = (opts = {}) => {
   const defaults = {
     awsSdkOptions: {},
     setToContext: false,
@@ -35,3 +35,5 @@ export default (opts = {}) => {
       }),
   };
 };
+
+module.exports = middleware;
