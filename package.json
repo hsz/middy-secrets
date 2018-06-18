@@ -31,5 +31,8 @@
   "dependencies": {
     "aws-sdk": "^2.227.1",
     "http-errors": "^1.6.3"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.5"
   }
 }
